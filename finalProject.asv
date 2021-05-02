@@ -85,8 +85,7 @@ end
 
 function [] = addGraph(~,~,~)
 global count;
-%This function creates a stacked bar graph of the ptiches of each pitch
-%separating balls and strikes
+%This function creates a stacked bar graph of the ptiches of each pitch 
         y = [str2double(count.pitchTypeStrike(1).String),str2double(count.pitchTypeBall(1).String)
              str2double(count.pitchTypeStrike(2).String),str2double(count.pitchTypeBall(2).String) 
              str2double(count.pitchTypeStrike(3).String),str2double(count.pitchTypeBall(3).String) 
