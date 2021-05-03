@@ -37,7 +37,7 @@ function [] = finalProject()
     count.subPitchT(5) = uicontrol('style','text','units','normalized','position',[.80 .20 .05 .09],'string',count.subT);
     
     %setting up the labels for balls, strikes, subtotals, and totals
-    count.strikeMessage = uicontrol('style','text','units','normalized','position',[.40 .875 .05 .09],'string','Strike');
+    count.strikeMessage = uilabel('style','text','Strike'units','normalized','position',[.40 .875 .05 .09],'string',);
     count.ballMessage = uicontrol('style','text','units','normalized','position',[.60 .875 .05 .09],'string','Ball'); 
     count.sbMessage = uicontrol('style','text','units','normalized','position',[.80 .875 .05 .09],'string','Sub Total');
     count.totalPitchMessage = uicontrol('style','text','units','normalized','position',[.75 .08 .05 .09],'string','Total:');
@@ -85,7 +85,8 @@ end
 
 function [] = addGraph(~,~,~)
 global count;
-%This function creates a stacked bar graph of the ptiches of each pitch 
+%This function creates a stacked bar graph of the ptiches of each pitch
+%separating balls and strikes
         y = [str2double(count.pitchTypeStrike(1).String),str2double(count.pitchTypeBall(1).String)
              str2double(count.pitchTypeStrike(2).String),str2double(count.pitchTypeBall(2).String) 
              str2double(count.pitchTypeStrike(3).String),str2double(count.pitchTypeBall(3).String) 
